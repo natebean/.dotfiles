@@ -45,7 +45,6 @@ local plugins = {
         "mypy",
         "ruff",
         "black",
-        "gopls",
       },
     },
     automatic_installation = true,

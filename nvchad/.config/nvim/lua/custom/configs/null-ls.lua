@@ -20,7 +20,7 @@ local opts = {
     null_ls.builtins.diagnostics.ruff,
     null_ls.builtins.formatting.black,
     null_ls.builtins.formatting.stylua,
-    null_ls.builtins.formatting.eslint
+    null_ls.builtins.formatting.eslint,
   }
 }
 
