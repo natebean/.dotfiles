@@ -17,14 +17,14 @@ nix-env -iA \
 	nixpkgs.direnv \
   nixpkgs.zellij
 
-
-git clone https://github.com/NvChad/NvChad $HOME/.config/nvim
+git clone https://github.com/natebean/kickstart.nvim $HOME/.config/nvim
 
 # stow dotfiles
 
-stow nvchad
 stow zellij
 stow starship
+stow tmux
+
 
 
 

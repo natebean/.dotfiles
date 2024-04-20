@@ -115,11 +115,13 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
 . "$HOME/.cargo/env"
 
 # for stow/perl
-export LC_CTYPE=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
+# export LC_CTYPE=en_US.UTF-8
+# export LC_ALL=en_US.UTF-8
+export LC_ALL=C
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -127,6 +129,13 @@ export NVM_DIR="$HOME/.nvm"
 
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+
+export PATH=~/bin:$PATH
+export PATH=~/bin/nvim-linux64/bin:$PATH
+export PATH=$PATH:/usr/local/go/bin
+
+if [ -e /home/natebean/.nix-profile/etc/profile.d/nix.sh ]; then . /home/natebean/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+echo ".bashrc ran"
 eval "$(pyenv init -)"
 eval "$(starship init bash)"
-
