@@ -88,11 +88,16 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+alias ll='eza -alF'
+alias la='eza -A'
+alias l='eza -CF'
+alias cat='bat'
+alias cd='z'
 alias t='tmux -u'
+
+#Python
 alias act='source ./venv/bin/activate'
+alias deact='deactivate'
 
 
 # Add an "alert" alias for long running commands.  Use like so:
@@ -139,6 +144,8 @@ export PATH=$PATH:/usr/local/go/bin
 
 if [ -e /home/natebean/.nix-profile/etc/profile.d/nix.sh ]; then . /home/natebean/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
-echo ".bashrc ran"
 eval "$(pyenv init -)"
 eval "$(starship init bash)"
+eval "$(zoxide init bash)"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
