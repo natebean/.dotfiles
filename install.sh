@@ -8,23 +8,19 @@ curl -L https://nixos.org/nix/install | sh
 
 # install packages
 nix-env -iA \
-	nixpkgs.git \
-	nixpkgs.neovim \
-	nixpkgs.stow \
-	nixpkgs.fzf \
-	nixpkgs.ripgrep \
-	nixpkgs.bat \
-	nixpkgs.direnv \
+  nixpkgs.git \
+  nixpkgs.neovim \
+  nixpkgs.stow \
+  nixpkgs.fzf \
+  nixpkgs.ripgrep \
+  nixpkgs.bat \
+  nixpkgs.direnv \
   nixpkgs.zellij
 
 git clone https://github.com/natebean/kickstart.nvim $HOME/.config/nvim
 
 # stow dotfiles
 
-stow zellij
-stow starship
-stow tmux
-
-
-
-
+# stow zellij
+# stow starship
+# stow tmux
