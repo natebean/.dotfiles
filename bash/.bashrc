@@ -153,3 +153,6 @@ eval "$(zoxide init bash)"
 # source ~/.bash_completion/alacritty
 
 export PYTHONPATH=/usr/lib/llvm-14/lib/python3.10/dist-packages
+
+# opencode
+export PATH=/home/natebean/.opencode/bin:$PATH
