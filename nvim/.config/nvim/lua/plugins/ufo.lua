@@ -1,0 +1,64 @@
+return {}
+-- return {
+--   "kevinhwang91/nvim-ufo",
+--   dependencies = {
+--     { "kevinhwang91/promise-async" }, -- Required dependency
+--   },
+--   opts = {
+--     provider_selector = function(_, filetype, buftype)
+--       -- Use Tree-sitter first, fallback to LSP
+--       return { "lsp", "treesitter", "indent" }
+--     end,
+--   },
+--   config = function(_, opts)
+--     -- Core fold settings (LazyVim-friendly)
+--     vim.o.foldcolumn = "1" -- show fold column
+--     vim.o.foldlevel = 99 -- keep folds open
+--     vim.o.foldlevelstart = 99
+--     vim.o.foldenable = true
+--
+--     require("ufo").setup(opts)
+--
+--     -- 🔑 Recommended keybindings
+--     local map = vim.keymap.set
+--
+--     -- Peek folded lines (doesn't open the fold)
+--     map("n", "zp", function()
+--       local winid = require("ufo").peekFoldedLinesUnderCursor()
+--       if not winid then
+--         vim.lsp.buf.hover()
+--       end
+--     end, { desc = "Peek fold under cursor" })
+--
+--     -- Fold controls (enhanced versions)
+--     map("n", "zR", require("ufo").openAllFolds, { desc = "Open all folds" })
+--     map("n", "zM", require("ufo").closeAllFolds, { desc = "Close all folds" })
+--
+--     -- Optional but very nice:
+--     map("n", "zK", function()
+--       require("ufo").peekFoldedLinesUnderCursor()
+--     end, { desc = "Peek folded lines" })
+--   end,
+-- }
+-- return {
+--   "kevinhwang91/nvim-ufo",
+--   dependencies = {
+--     { "kevinhwang91/promise-async" }, -- Required dependency
+--   },
+--   config = function()
+--     -- General Neovim folding options for nvim-ufo
+--     vim.o.foldcolumn = "1"
+--     vim.o.foldlevel = 99 -- Start with all folds open
+--     vim.o.foldlevelstart = 99
+--     vim.o.foldenable = true
+--
+--     -- Set up nvim-ufo
+--     require("ufo").setup({
+--       -- Add desired configurations here.
+--       -- Example: Use LSP for folding with indent as a fallback
+--       provider_selector = function(bufnr, filetype, buftype)
+--         return { "lsp", "indent", "treesitter" }
+--       end,
+--     })
+--   end,
+-- }

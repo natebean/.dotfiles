@@ -28,7 +28,7 @@ return {
       require("opencode").prompt("@this")
     end, { desc = "Add to opencode" })
 
-    vim.keymap.set({ "n", "t" }, "<leader>gt", function()
+    vim.keymap.set({ "n", "t" }, "<leader>at", function()
       require("opencode").toggle()
     end, { desc = "Toggle opencode" })
 
@@ -45,58 +45,3 @@ return {
     -- vim.keymap.set("n", "-", "<C-x>", { desc = "Decrement", noremap = true })
   end,
 }
-
--- return {
---
---
---   {
---     "NickvanDyke/opencode.nvim",
---     dependencies = {
---       -- Recommended; used for prompt input, picker, embedded terminal, etc.
---       { "folke/snacks.nvim", opts = { input = {}, picker = {}, terminal = {} } },
---     },
---     -- run after the plugin is loaded
---     config = function()
---       ---@type opencode.Opts
---       vim.g.opencode_opts = {
---         -- put any plugin options you want here, or leave empty for defaults
---       }
---
---       -- Required for opencode.nvim’s auto-reload behavior
---       vim.o.autoread = true
---     end,
---     keys = {
---       -- <leader>a prefix = "AI"
---
---       -- Ask about current buffer / visual selection
---       {
---         "<leader>aa",
---         function()
---           require("opencode").ask("@this: ", { submit = true })
---         end,
---         mode = { "n", "x" },
---         desc = "AI: Ask about this",
---       },
---
---       -- Open the “select action” menu (prompts like explain/review/fix/etc.)
---       {
---         "<leader>as",
---         function()
---           require("opencode").select()
---         end,
---         mode = { "n", "x" },
---         desc = "AI: Select action…",
---       },
---
---       -- Optional: toggle/open the embedded opencode terminal
---       {
---         "<leader>ao",
---         function()
---           require("opencode").toggle()
---         end,
---         mode = "n",
---         desc = "AI: Toggle Opencode terminal",
---       },
---     },
---   },
--- }
