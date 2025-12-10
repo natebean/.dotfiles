@@ -17,6 +17,8 @@ nix-env -iA \
   nixpkgs.direnv \
   nixpkgs.zellij
 
+nix-env -iA nixpkgs.yazi
+
 git clone https://github.com/natebean/kickstart.nvim $HOME/.config/nvim
 
 # stow dotfiles

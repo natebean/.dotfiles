@@ -73,6 +73,15 @@ xterm* | rxvt*)
 *) ;;
 esac
 
+# Yazi shortcut
+function y() {
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+  yazi "$@" --cwd-file="$tmp"
+  IFS= read -r -d '' cwd <"$tmp"
+  [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+  rm -f -- "$tmp"
+}
+
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -135,8 +144,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+# export PYENV_ROOT="$HOME/.pyenv"
+# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 
 export PATH=~/bin:$PATH
 export PATH=~/bin/nvim-linux64/bin:$PATH
@@ -145,8 +154,8 @@ export PATH=$PATH:/usr/racket/bin
 
 if [ -e /home/natebean/.nix-profile/etc/profile.d/nix.sh ]; then . /home/natebean/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
-eval "$(pyenv init -)"
-eval "$(starship init bash)"
+# eval "$(pyenv init -)"
+# eval "$(starship init bash)"
 eval "$(zoxide init bash)"
 
 # [ -f ~/.fzf.bash ] && source ~/.fzf.bash
@@ -156,3 +165,4 @@ export PYTHONPATH=/usr/lib/llvm-14/lib/python3.10/dist-packages
 
 # opencode
 export PATH=/home/natebean/.opencode/bin:$PATH
+export PATH="$HOME/opt/emacs-30.2/bin:$PATH"
