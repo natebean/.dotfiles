@@ -1,0 +1,69 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "j k": "vim::NormalBefore"
+    }
+  },
+  // =========================
+  // Vim-style buffer movement
+  // =========================
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      // Neovim-style: Shift-H / Shift-L to move between buffers
+      "shift-h": "pane::ActivatePreviousItem",
+      "shift-l": "pane::ActivateNextItem",
+
+      // Optional: Tab / Shift-Tab to switch buffers
+      "tab": "pane::ActivateNextItem",
+      "shift-tab": "pane::ActivatePreviousItem"
+    }
+  },
+
+  // =========================
+  // Leader-based navigation
+  // =========================
+  {
+    "context": "Workspace",
+    "bindings": {
+      // Buffers
+      // "space b n": "pane::ActivateNextItem",
+      // "space b p": "pane::ActivatePreviousItem",
+      // "space b d": "pane::CloseActiveItem",
+
+      // Agent panel: toggle focus (works from editor or panel)
+      "; a": "agent::ToggleFocus",
+      "; A": "agent::NewThread",
+      "; w": "pane::CloseActiveItem",
+      "; v": "workspace::CloseAllDocks",
+      "; h": "workspace::ToggleLeftDock",
+      "; l": "workspace::ToggleRightDock"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-0": "terminal_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "g r": "editor::FindAllReferences"
+    }
+  },
+  {
+    "context": "((vim_mode == helix_normal || vim_mode == helix_select) && !menu)",
+    "bindings": {
+      "g shift-r": "editor::FindAllReferences"
+    }
+  }
+]
