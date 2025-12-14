@@ -13,9 +13,9 @@ nix-env -iA \
   nixpkgs.stow \
   nixpkgs.fzf \
   nixpkgs.ripgrep \
-  nixpkgs.bat \
-  nixpkgs.direnv \
-  nixpkgs.zellij
+  nixpkgs.bat
+# nixpkgs.direnv \
+# nixpkgs.zellij
 
 nix-env -iA nixpkgs.yazi
 

@@ -1,0 +1,57 @@
+# ~/.config/alacritty/alacritty.toml
+
+[window]
+padding = { x = 8, y = 8 }
+decorations = "Buttonless" # macOS-style titlebar
+dynamic_title = true
+startup_mode = "Windowed"
+option_as_alt = "Both"     # macOS: Option behaves as Alt
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[font]
+# --- Bigger font, very readable ---
+size = 16.5
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "JetBrains Mono"
+style = "Bold"
+
+[font.italic]
+family = "JetBrains Mono"
+style = "Italic"
+
+[font.bold_italic]
+family = "JetBrains Mono"
+style = "Bold Italic"
+
+# Improve glyph spacing slightly for large fonts
+[font.offset]
+x = 0
+y = 1
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[cursor]
+style = { shape = "Block", blinking = "On" }
+blink_interval = 500
+
+[mouse]
+hide_when_typing = true
+
+[selection]
+save_to_clipboard = true
+
+[terminal]
+shell = "/bin/zsh"
+
+[env]
+TERM = "xterm-256color"

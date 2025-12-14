@@ -1,6 +1,7 @@
 # GNU Stow Reference
 
 ## Basic Concept
+
 Stow is a symlink manager that creates symbolic links from a source directory to a target directory. It's commonly used for managing dotfiles.
 
 ## Basic Usage
@@ -12,6 +13,7 @@ stow [options] <package>
 ## Common Workflow
 
 ### 1. Organize your dotfiles
+
 Structure subdirectories within your stow directory (e.g., `~/.dotfiles/`). Each subdirectory represents a "package":
 
 ```

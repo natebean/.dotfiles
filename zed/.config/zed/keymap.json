@@ -21,13 +21,11 @@
       // Neovim-style: Shift-H / Shift-L to move between buffers
       "shift-h": "pane::ActivatePreviousItem",
       "shift-l": "pane::ActivateNextItem",
-
       // Optional: Tab / Shift-Tab to switch buffers
       "tab": "pane::ActivateNextItem",
       "shift-tab": "pane::ActivatePreviousItem"
     }
   },
-
   // =========================
   // Leader-based navigation
   // =========================
@@ -38,7 +36,6 @@
       // "space b n": "pane::ActivateNextItem",
       // "space b p": "pane::ActivatePreviousItem",
       // "space b d": "pane::CloseActiveItem",
-
       // Agent panel: toggle focus (works from editor or panel)
       "; a": "agent::ToggleFocus",
       "; A": "agent::NewThread",

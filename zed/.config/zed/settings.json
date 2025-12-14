@@ -7,21 +7,19 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "vim_mode": true,
   "agent": {
-    "always_allow_tool_actions": true,
-    "default_profile": "ask",
     "default_model": {
       "provider": "openrouter",
       "model": "nex-agi/deepseek-v3.1-nex-n1:free"
     },
     "model_parameters": []
   },
-  "vim_mode": true,
   "ui_font_size": 16,
   "buffer_font_size": 15,
   "theme": {
-    "mode": "system",
-    "light": "One Light",
+    "mode": "light",
+    "light": "Gruvbox Light",
     "dark": "One Dark"
   }
 }
