@@ -55,7 +55,6 @@ persistent-workspaces = [
   "6",
   "7",
   "8",
-  "9",
   "scratchpad",
 ]
 
@@ -115,8 +114,17 @@ if.app-id = "dev.warp.Warp-Stable"
 run = ["move-node-to-workspace 2"]
 
 [[on-window-detected]]
-if.app-id = "com.todesktop.230313mzl4w4u92" # Cursor
+if.app-id = "com.mitchellh.ghostty"
+run = ["move-node-to-workspace 2"]
+
+[[on-window-detected]]
+# if.app-id = "com.todesktop.230313mzl4w4u92" # Cursor
+if.app-id = "com.microsoft.VSCode" # VSCode
 run = ["move-node-to-workspace 3"]
+
+[[on-window-detected]]
+if.app-id = 'com.openai.codex'
+run = ['move-node-to-workspace 3']
 
 [[on-window-detected]]
 if.app-id = "dev.zed.Zed"
@@ -124,7 +132,7 @@ run = ["move-node-to-workspace 4"]
 
 [[on-window-detected]]
 if.app-id = "inc.tana.desktop"
-run = ["move-node-to-workspace 9"]
+run = ["move-node-to-workspace 8"]
 
 [[on-window-detected]]
 if.app-id = "org.alacritty"
@@ -176,16 +184,19 @@ ctrl-alt-cmd-shift-b = [
 
 # Workspace 2
 ctrl-alt-cmd-shift-w = ['workspace 2', "exec-and-forget open -a 'Warp'"]
+ctrl-alt-cmd-shift-g = ['workspace 2', "exec-and-forget open -a 'Ghostty'"]
 
 # Workspace 3
-ctrl-alt-cmd-shift-c = ['workspace 3', "exec-and-forget open -a 'Cursor'"]
+# ctrl-alt-cmd-shift-c = ['workspace 3', "exec-and-forget open -a 'Cursor'"]
+ctrl-alt-cmd-shift-c = ['workspace 3', "exec-and-forget open -a 'Code'"]
+ctrl-alt-cmd-shift-x = ['workspace 3', "exec-and-forget open -a 'Codex'"]
 
 # Workspace 4
 ctrl-alt-cmd-shift-z = ['workspace 4', "exec-and-forget open -a 'Zed'"]
 
-# Workspace 9
-ctrl-alt-cmd-shift-t = ['workspace 9', "exec-and-forget open -a 'Tana'"]
-ctrl-alt-cmd-shift-l = ['workspace 9', "exec-and-forget open -a 'Logseq'"]
+# Workspace 8
+ctrl-alt-cmd-shift-t = ['workspace 8', "exec-and-forget open -a 'Tana'"]
+ctrl-alt-cmd-shift-l = ['workspace 8', "exec-and-forget open -a 'Logseq'"]
 
 # Scratch Alacritty (current workspace, tiled, distinguished by title)
 ctrl-alt-cmd-shift-enter = "exec-and-forget /bin/zsh -lc ~/.config/aerospace/toggle-scratch.zsh"
@@ -226,8 +237,6 @@ alt-5 = 'workspace 5'
 alt-6 = 'workspace 6'
 alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
-alt-9 = 'workspace 9'
-alt-0 = 'workspace 10'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace 1'
@@ -238,7 +247,6 @@ alt-shift-5 = 'move-node-to-workspace 5'
 alt-shift-6 = 'move-node-to-workspace 6'
 alt-shift-7 = 'move-node-to-workspace 7'
 alt-shift-8 = 'move-node-to-workspace 8'
-alt-shift-9 = 'move-node-to-workspace 9'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-tab = 'workspace-back-and-forth'

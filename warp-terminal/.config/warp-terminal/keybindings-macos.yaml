@@ -1,0 +1,23 @@
+---
+# Mac-optimized keybindings for Warp Terminal
+# Using cmd instead of ctrl for Mac conventions
+
+# Editor navigation
+"editor_view:right": alt-f
+
+# Pane navigation (vim-style with cmd-shift)
+"pane_group:navigate_left": cmd-shift-h
+"pane_group:navigate_down": cmd-shift-j
+"pane_group:navigate_up": cmd-shift-k
+"pane_group:navigate_right": cmd-shift-l
+
+# Pane management
+"pane_group:add_down": cmd-shift-d
+"pane_group:add_right": cmd-shift-r
+"pane_group:toggle_maximize_pane": cmd-shift-enter
+
+# Tab management (Mac conventions)
+"workspace:close_active_tab": cmd-w
+"workspace:activate_next_tab": cmd-shift-]
+"workspace:activate_prev_tab": cmd-shift-[
+

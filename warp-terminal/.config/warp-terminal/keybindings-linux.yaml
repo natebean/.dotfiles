@@ -1,0 +1,32 @@
+---
+# Linux-optimized keybindings for Warp Terminal
+
+# Editor navigation
+"editor_view:right": alt-f
+
+# Pane navigation (vim-style with alt)
+"pane_group:navigate_left": alt-h
+"pane_group:navigate_down": alt-j
+"pane_group:navigate_up": alt-k
+"pane_group:navigate_right": alt-l
+
+# Pane management
+"pane_group:add_down": ctrl-shift--
+"pane_group:add_right": "ctrl-shift-\\"
+"pane_group:toggle_maximize_pane": alt-m
+
+# Tab management
+"workspace:close_active_tab": ctrl-w
+"workspace:activate_next_tab": alt-shift-h
+"workspace:activate_prev_tab": alt-shift-l
+
+# Direct tab access
+"workspace:activate_first_tab": alt-1
+"workspace:activate_second_tab": alt-2
+"workspace:activate_third_tab": alt-3
+"workspace:activate_fourth_tab": alt-4
+"workspace:activate_fifth_tab": alt-5
+"workspace:activate_sixth_tab": alt-6
+"workspace:activate_seventh_tab": alt-7
+"workspace:activate_eighth_tab": alt-8
+"workspace:activate_last_tab": alt-9
